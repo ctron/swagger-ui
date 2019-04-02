@@ -21,6 +21,10 @@ COPY ./docker/run.sh /usr/share/nginx/
 COPY ./docker/configurator /usr/share/nginx/configurator
 
 RUN chmod +x /usr/share/nginx/run.sh
+RUN chmod -R a+rw /usr/share/nginx
+RUN chmod -R a+rw /etc/nginx
+RUN chmod -R a+rw /var
+RUN chmod -R a+rw /var/run
 
 EXPOSE 8080
 
